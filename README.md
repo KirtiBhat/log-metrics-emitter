@@ -85,7 +85,7 @@ After clicking navigate to Discover and filter the logs by adding
 <img width="1791" alt="logs" src="https://user-images.githubusercontent.com/56393679/135747935-998e5463-071e-4645-9828-bc88d94fec60.png">
 
 ### Installation of prometheus and grafana in K8 for metrics ###
-1. I have used prometheus using helm .Below are the steps for the setup
+1. Prometheus using helm .Below are the steps for the setup
 
          1. brew install helm (package manager for kubernetes)
          2. helm repo add prometheus-community https://prometheus-community.github.io/helm-charts ( to added "prometheus-community" to your repositories)
