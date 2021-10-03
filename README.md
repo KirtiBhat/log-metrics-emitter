@@ -14,8 +14,11 @@ Design observability stack (log/metrics) using ELK ,Prometheus and Grafana.Simpl
    5. To hit the exposed endpoints start `minikube service spring-boot-prometheus`
   
    Endpoints configured are
-   * /v1/counter - will increase the counter by one each time. We have named our metrics as `custom_counter`
-   * /v1/exception - will throw a exception
+   * /v1/counter - When we hit this endpoint it will increase the counter each time by 1,We are defining custom metrics named `custom_counter` which is also incremented by     1..once you navigate to /metrics endpoint you will be able to see your metric listed there
+         # HELP custom_counter_total  
+         # TYPE custom_counter_total counter
+         custom_counter_total 7.0
+   * /v1/logexception - Will throw a Exception .This was done in order to test the multiline property in the filebeat configuration so that whole exception message is displayed as a single message and not in multiple lines in Kibana
  
 
 ### Installation of Elastic search , Kibana and filebeat in K8 ###
