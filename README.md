@@ -93,8 +93,9 @@ After clicking navigate to Discover and filter the logs by adding
          4. kubectl expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-np
          5. minikube service prometheus-server-np
   
+   `custom_counter_total` in prometheus UI
   ![SAVE_20211003_145154](https://user-images.githubusercontent.com/56393679/135747915-01c9bf20-2239-4208-9de3-edf83b6d4eab.jpg)
-
+  ![SAVE_20211003_145144](https://user-images.githubusercontent.com/56393679/135747898-36071733-deda-44d6-a55d-1ce0471f9298.jpg)
 
 2. Grafana using helm.Below are the steps for the setup
 
@@ -103,8 +104,10 @@ After clicking navigate to Discover and filter the logs by adding
          3. kubectl get secret --namespace default my-release-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
          4. kubectl expose service my-release-grafana --type=NodePort --target-port=3000 --name=grafana-np
          5. minikube service my-release-grafana
-![SAVE_20211003_145144](https://user-images.githubusercontent.com/56393679/135747898-36071733-deda-44d6-a55d-1ce0471f9298.jpg)
+   
+3. In grafana select datasourse as `prometheus` and configure the panels.   
+    K8 metrics
 <img width="1719" alt="k8-metrics" src="https://user-images.githubusercontent.com/56393679/135747950-9c66a250-8d0e-4bd4-8647-c4ea365b6fd1.png">
+   Application metrics
 <img width="1713" alt="dashboard" src="https://user-images.githubusercontent.com/56393679/135747963-3ac4956b-cd0d-4ff9-8668-7868162d7fc6.png">
 
-3.  you will be able to see `custom_counter_total` in prometheus
