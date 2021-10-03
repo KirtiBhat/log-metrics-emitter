@@ -34,7 +34,7 @@ public class CounterController {
     }
 
 
-    @GetMapping("/v1/exception")
+    @GetMapping("/v1/logexception")
     public String raiseException(){
         String response = "";
         try{
