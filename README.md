@@ -116,3 +116,5 @@ After clicking navigate to Discover and filter the logs by adding
    Application metrics
 <img width="1713" alt="dashboard" src="https://user-images.githubusercontent.com/56393679/135747963-3ac4956b-cd0d-4ff9-8668-7868162d7fc6.png">
 
+![count_image](https://user-images.githubusercontent.com/56393679/135752497-26285197-745d-4ab6-b9ef-96d56bb8b1c5.jpeg)
+
